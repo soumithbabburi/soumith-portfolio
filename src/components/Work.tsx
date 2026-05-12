@@ -5,32 +5,49 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "CIPHERQ",
+    category: "End-to-End AI Drug Repurposing Platform · Solix Technologies",
+    description:
+      "Architected a production-grade computational pipeline that integrates protein–ligand docking (AutoDock Vina), ensemble ML scoring (Random Forest + Gradient Boosting, 87–94% accuracy), and ADME/PBPK pharmacokinetic modeling to identify new therapeutic uses for FDA-approved drugs. Screened 5,000+ drug–target pairs in a PostgreSQL schema; built a BioCypher knowledge graph linking drugs, targets, and diseases via PubMed, ClinicalTrials.gov, PDB, and ChEMBL APIs; and delivered 3D molecular visualization dashboards with Streamlit, Plotly, and Py3Dmol.",
+    tags: ["AutoDock Vina", "BioCypher", "Random Forest", "ADME/PBPK", "PostgreSQL", "Streamlit", "Python"],
+    image: "/images/cipherq.png",
+    link: "https://github.com/soumithbabburi",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "scRNA-seq Biomarker Discovery",
+    category: "Single-Cell Transcriptomics · Autoimmune Disorder Research · IU",
+    description:
+      "Executed an end-to-end scRNA-seq pipeline on patient cohort data to identify disease-specific immune cell subpopulations in autoimmune disorders, achieving a 25% increase in novel subpopulation detection. Applied Seurat and Scanpy for ambient RNA correction, graph-based clustering, and UMAP dimensionality reduction, followed by differential expression (Wilcoxon + DESeq2). Conducted pathway enrichment via clusterProfiler, KEGG, and STRING PPI network analysis to prioritize therapeutic targets.",
+    tags: ["Seurat (R)", "Scanpy", "UMAP", "DESeq2", "clusterProfiler", "KEGG", "STRING", "Python / R"],
+    image: "/images/scrna-seq.png",
+    link: "https://github.com/soumithbabburi",
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
+    title: "Clinical EMR Platform",
+    category: "HIPAA-Compliant Full-Stack EHR System · GTechnologies",
+    description:
+      "Designed and built a full-stack Electronic Medical Records system from the ground up, reducing manual record retrieval latency by 40%. Implemented 15+ RESTful API endpoints for patient registration, appointment scheduling, diagnosis management, lab reporting, and medication tracking. Built a normalized MySQL schema with role-based access control and delivered a responsive React.js frontend with real-time provider dashboards — all under HIPAA compliance.",
+    tags: ["React.js", "Node.js / Express", "MySQL", "REST APIs", "HIPAA", "JWT Auth", "TypeScript"],
+    image: "/images/emr-system.png",
+    link: "https://github.com/soumithbabburi",
   },
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "COVID-19 Vaccination Analytics",
+    category: "Public Health Surveillance Database · Academic Project",
+    description:
+      "Engineered a scalable vaccination surveillance system to ingest, deduplicate, and analyze 100,000+ vaccination records. Built ETL pipelines in Python with SHA-256-based unique ID generation achieving 99.9% deduplication accuracy. Exposed RESTful Flask endpoints for cohort filtering and temporal analysis, and developed interactive dashboards for real-time geographic and demographic reporting consumed by public health analysts.",
+    tags: ["Python", "Flask", "PostgreSQL", "ETL Pipelines", "pandas", "SQL", "REST APIs"],
+    image: "/images/covid19db.png",
+    link: "https://github.com/soumithbabburi",
+  },
+  {
+    title: "Breast Cancer ML Classifier",
+    category: "Clinical Machine Learning · Tumor Classification · Academic",
+    description:
+      "Benchmarked a multi-model classification pipeline on the Wisconsin Breast Cancer Dataset (569 samples, 30 features) to distinguish malignant from benign tumors. Applied recursive feature elimination, correlation-based selection, StandardScaler normalization, and 5-fold stratified cross-validation across Random Forest, SVM (RBF kernel), and Logistic Regression. Random Forest achieved 96% test accuracy (AUC-ROC 0.99) after hyperparameter tuning with GridSearchCV.",
+    tags: ["scikit-learn", "Random Forest", "SVM", "GridSearchCV", "AUC-ROC 0.99", "pandas", "Jupyter"],
+    image: "/images/cancer-ml.png",
+    link: "https://github.com/soumithbabburi",
   },
 ];
 
@@ -49,14 +66,12 @@ const Work = () => {
   );
 
   const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
@@ -68,7 +83,6 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -86,13 +100,10 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {projects.map((project, index) => (
                 <div className="carousel-slide" key={index}>
@@ -103,12 +114,12 @@ const Work = () => {
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
-                        </p>
-                        <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
-                          <p>{project.tools}</p>
+                        <p className="carousel-category">{project.category}</p>
+                        <p className="carousel-description">{project.description}</p>
+                        <div className="carousel-tags">
+                          {project.tags.map((tag, i) => (
+                            <span key={i} className="carousel-tag">{tag}</span>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -125,13 +136,11 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""}`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"

@@ -15,59 +15,86 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Co-Founder</h4>
-                <h5>CallHQ.ai</h5>
+                <h4>Software Programmer</h4>
+                <h5>Solix Technologies · Dallas, TX</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Building CallHQ.ai, a voice AI platform for
-              automating customer calls, support, and conversions.
+              Architected CIPHERQ, an end-to-end AI drug repurposing platform
+              integrating molecular docking (Autodock Vina), ensemble ML models
+              (87–94% accuracy), ADME/PBPK workflows, and biomedical knowledge
+              graphs (BioCypher). Built automated pipelines connecting PubMed,
+              ClinicalTrials.gov, PDB, and ChEMBL APIs; delivered 3D molecular
+              dashboards with Streamlit, Plotly, and Py3Dmol.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Adobe</h4>
-                <h5>6+ years · Noida</h5>
+                <h4>Data Science Intern</h4>
+                <h5>GTechnologies · Indianapolis, IN</h5>
               </div>
-              <h3>2017–24</h3>
+              <h3>2024–25</h3>
             </div>
             <p>
-              Senior Lead Software Engineer (Feb 2024 – May 2024). Lead Software
-              Engineer (Feb 2021 – Feb 2024). Software Engineer II (Dec 2017 –
-              Feb 2021): internationalization, globalization, and localization for
-              Adobe Technical Communication Suite; functional and linguistic testing
-              strategy; in-house tooling; collaboration with product and engineering
-              for high-quality localized releases.
+              Designed a full-stack Electronic Medical Records system (React.js,
+              Node.js/Express, MySQL) reducing manual retrieval time by 40%.
+              Built RESTful APIs for clinical workflows, responsive dashboards,
+              and end-to-end testing and deployment documentation.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Consultant</h4>
-                <h5>Genpact Headstrong </h5>
+                <h4>Bioinformatics Analyst</h4>
+                <h5>Indiana University · Indianapolis, IN</h5>
               </div>
-              <h3>2016–17</h3>
+              <h3>2022–24</h3>
             </div>
             <p>
-              Sep 2016 – Nov 2017. Developed and maintained WCF services consumed
-              by the UI; deployment support across environments; NUnit tests and
-              coverage; bug fixes from QA and users; database work.
+              Performed scRNA-seq analysis to identify disease-specific
+              biomarkers in autoimmune disorders — increasing novel cell
+              subpopulation detection by 25%. Applied Seurat and Scanpy for
+              clustering, UMAP, and differential expression; produced pathway
+              enrichment reports using Cytoscape, STRING, and KEGG.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Sf Engineer</h4>
-                <h5>Infogain</h5>
+                <h4>Bioinformatics Research Assistant</h4>
+                <h5>Indiana University · Indianapolis, IN</h5>
               </div>
-              <h3>2013-16</h3>
+              <h3>2022–24</h3>
             </div>
             <p>
-              Software engineering across enterprise projects, contributing to
-              design, development, and delivery of business applications.
+              Optimized CRISPR-Cas13 transcriptome editing with CASowary and
+              custom Python scripts, improving gRNA targeting specificity.
+              Performed RNA-seq analysis using DESeq2 and StringTie; correlated
+              gRNA efficiency with expression data to minimize off-target hits.
             </p>
+          </div>
+        </div>
+
+        <div className="accomplishments-section">
+          <h3>Accomplishments</h3>
+          <div className="accomplishments-grid">
+            <div className="accomplishment-card">
+              <div className="acc-year">2023</div>
+              <h4>Poster Presenter — Midwest Symposium on Oligonucleotide Therapeutics</h4>
+              <p>Presented transcriptome-wide CRISPR-Cas off-target profiling using RNA sequencing and bioinformatics pipelines to 50+ academic and industry experts.</p>
+            </div>
+            <div className="accomplishment-card">
+              <div className="acc-year">2019</div>
+              <h4>1st Place — Poster, World Pharmacists Day</h4>
+              <p>Recognized for "Nanobots: A Novel Drug Delivery System" — top submission among 20+ entries showcasing targeted drug delivery innovations.</p>
+            </div>
+            <div className="accomplishment-card">
+              <div className="acc-year">2019</div>
+              <h4>1st Place — Debate, National Pharmacy Week</h4>
+              <p>Awarded for a winning argument on Conventional vs. Modern Teaching Methodologies, demonstrating advanced critical thinking and communication.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -242,3 +242,71 @@
     justify-content: left;
   }
 }
+
+/* Accomplishments */
+.accomplishments-section {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.accomplishments-section h3 {
+  font-size: 40px;
+  font-weight: 400;
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+.accomplishments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.accomplishment-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.accomplishment-card:hover {
+  border-color: var(--accentColor);
+  background: rgba(94, 234, 212, 0.05);
+}
+
+.accomplishment-card .acc-year {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.accomplishment-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.accomplishment-card p {
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 900px) {
+  .accomplishments-grid {
+    grid-template-columns: 1fr;
+  }
+  .accomplishments-section h3 {
+    font-size: 30px;
+  }
+}

@@ -88,6 +88,34 @@
   font-size: 16px;
 }
 
+.carousel-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #c8c7c7;
+  line-height: 1.7;
+  margin: 10px 0 0;
+  max-width: 520px;
+}
+
+.carousel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.carousel-tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  color: var(--accentColor);
+  background: rgba(94, 234, 212, 0.06);
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
 .carousel-tools {
   margin-top: 16px;
 }
@@ -327,5 +355,15 @@
 
   .work-image img {
     max-height: 250px;
+  }
+
+  .carousel-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .carousel-tag {
+    font-size: 11px;
+    padding: 3px 10px;
   }
 }
