@@ -6,18 +6,36 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 const projects = [
   {
     title: "CIPHERQ",
-    category: "End-to-End AI Drug Repurposing Platform · Solix Technologies",
+    category: "AI Drug Repurposing Platform · Solix Technologies",
     description:
-      "Architected a production-grade computational pipeline that integrates protein–ligand docking (AutoDock Vina), ensemble ML scoring (Random Forest + Gradient Boosting, 87–94% accuracy), and ADME/PBPK pharmacokinetic modeling to identify new therapeutic uses for FDA-approved drugs. Screened 5,000+ drug–target pairs in a PostgreSQL schema; built a BioCypher knowledge graph linking drugs, targets, and diseases via PubMed, ClinicalTrials.gov, PDB, and ChEMBL APIs; and delivered 3D molecular visualization dashboards with Streamlit, Plotly, and Py3Dmol.",
+      "Production-grade drug repurposing pipeline integrating protein–ligand docking (AutoDock Vina), ensemble ML scoring (Random Forest + Gradient Boosting, 87–94% accuracy), and ADME/PBPK pharmacokinetic modeling. Screened 5,000+ drug–target pairs in PostgreSQL; built a BioCypher knowledge graph linking drugs, targets, and diseases via PubMed, ClinicalTrials.gov, PDB, and ChEMBL APIs; delivered 3D molecular visualization dashboards with Streamlit, Plotly, and Py3Dmol.",
     tags: ["AutoDock Vina", "BioCypher", "Random Forest", "ADME/PBPK", "PostgreSQL", "Streamlit", "Python"],
     image: "/images/cipherq.png",
     link: "https://github.com/soumithbabburi",
   },
   {
-    title: "scRNA-seq Biomarker Discovery",
-    category: "Single-Cell Transcriptomics · Autoimmune Disorder Research · IU",
+    title: "POZ Platform",
+    category: "Enterprise 505(b)(2) Drug Screening Platform · Solix Technologies",
     description:
-      "Executed an end-to-end scRNA-seq pipeline on patient cohort data to identify disease-specific immune cell subpopulations in autoimmune disorders, achieving a 25% increase in novel subpopulation detection. Applied Seurat and Scanpy for ambient RNA correction, graph-based clustering, and UMAP dimensionality reduction, followed by differential expression (Wilcoxon + DESeq2). Conducted pathway enrichment via clusterProfiler, KEGG, and STRING PPI network analysis to prioritize therapeutic targets.",
+      "Built for Serina Therapeutics — an enterprise drug screening platform that searches 2.4M ChEMBL 33 compounds against a 3-model ensemble ML pipeline (R²=0.707, 88% therapeutic window accuracy). Features InterpretML EBM glassbox scoring for regulatory transparency, a Three.js interactive 3D organ PK heatmap, FDA FAERS adverse-event analyzer, and Groq LLM-generated out-licensing reports — all served via Flask/PostgreSQL with real-time compound ranking.",
+    tags: ["ChEMBL 33", "InterpretML EBM", "Flask", "PostgreSQL", "Three.js", "RDKit", "Groq LLM", "Python"],
+    image: "/images/poz-platform.png",
+    link: "https://github.com/soumithbabburi",
+  },
+  {
+    title: "SimuTissue",
+    category: "Spatial Transcriptomics Intelligence Platform · Solix Technologies",
+    description:
+      "End-to-end spatial transcriptomics platform that ingests .h5ad and 10x Visium files for FFPE tissue denoising, spatially-resolved cell-type deconvolution, cell–cell interaction mapping, and drug response prediction. Built on FastAPI + React with a Dockerized microservices backend; leverages PyTorch/Geneformer and scGPT for foundation-model-based cell embeddings, AnnData/Scanpy for preprocessing, and PostgreSQL for experiment persistence.",
+    tags: ["FastAPI", "React", "PyTorch", "Geneformer", "AnnData", "Scanpy", "Docker", "PostgreSQL"],
+    image: "/images/simutissue.png",
+    link: "https://github.com/soumithbabburi",
+  },
+  {
+    title: "scRNA-seq Biomarker Discovery",
+    category: "Single-Cell Transcriptomics · Autoimmune Research · Indiana University",
+    description:
+      "End-to-end scRNA-seq pipeline on patient cohort data to identify disease-specific immune subpopulations in autoimmune disorders, achieving 25% increase in novel subpopulation detection. Applied Seurat and Scanpy for ambient RNA correction, graph-based clustering, and UMAP dimensionality reduction, followed by differential expression (Wilcoxon + DESeq2). Conducted pathway enrichment via clusterProfiler, KEGG, and STRING PPI network analysis to prioritize therapeutic targets.",
     tags: ["Seurat (R)", "Scanpy", "UMAP", "DESeq2", "clusterProfiler", "KEGG", "STRING", "Python / R"],
     image: "/images/scrna-seq.png",
     link: "https://github.com/soumithbabburi",
@@ -29,24 +47,6 @@ const projects = [
       "Designed and built a full-stack Electronic Medical Records system from the ground up, reducing manual record retrieval latency by 40%. Implemented 15+ RESTful API endpoints for patient registration, appointment scheduling, diagnosis management, lab reporting, and medication tracking. Built a normalized MySQL schema with role-based access control and delivered a responsive React.js frontend with real-time provider dashboards — all under HIPAA compliance.",
     tags: ["React.js", "Node.js / Express", "MySQL", "REST APIs", "HIPAA", "JWT Auth", "TypeScript"],
     image: "/images/emr-system.png",
-    link: "https://github.com/soumithbabburi",
-  },
-  {
-    title: "COVID-19 Vaccination Analytics",
-    category: "Public Health Surveillance Database · Academic Project",
-    description:
-      "Engineered a scalable vaccination surveillance system to ingest, deduplicate, and analyze 100,000+ vaccination records. Built ETL pipelines in Python with SHA-256-based unique ID generation achieving 99.9% deduplication accuracy. Exposed RESTful Flask endpoints for cohort filtering and temporal analysis, and developed interactive dashboards for real-time geographic and demographic reporting consumed by public health analysts.",
-    tags: ["Python", "Flask", "PostgreSQL", "ETL Pipelines", "pandas", "SQL", "REST APIs"],
-    image: "/images/covid19db.png",
-    link: "https://github.com/soumithbabburi",
-  },
-  {
-    title: "Breast Cancer ML Classifier",
-    category: "Clinical Machine Learning · Tumor Classification · Academic",
-    description:
-      "Benchmarked a multi-model classification pipeline on the Wisconsin Breast Cancer Dataset (569 samples, 30 features) to distinguish malignant from benign tumors. Applied recursive feature elimination, correlation-based selection, StandardScaler normalization, and 5-fold stratified cross-validation across Random Forest, SVM (RBF kernel), and Logistic Regression. Random Forest achieved 96% test accuracy (AUC-ROC 0.99) after hyperparameter tuning with GridSearchCV.",
-    tags: ["scikit-learn", "Random Forest", "SVM", "GridSearchCV", "AUC-ROC 0.99", "pandas", "Jupyter"],
-    image: "/images/cancer-ml.png",
     link: "https://github.com/soumithbabburi",
   },
 ];
